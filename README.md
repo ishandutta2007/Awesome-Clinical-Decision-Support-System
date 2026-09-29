@@ -66,7 +66,7 @@ Below is a tabular overview of top commercial SaaS CDSS products, sorted by **Co
 
 ## ⚡ Open-Source GitHub Projects
 
-The open-source ecosystem in clinical decision support plays a critical role in algorithm execution, FHIR interoperability, and AI model evaluation. Below is a curated list of open-source CDSS repositories, sorted by **GitHub Stars_Count** (descending).
+The open-source ecosystem in clinical decision support plays a critical role in algorithm execution, FHIR interoperability, and AI model evaluation. Below is a curated list of open-source CDSS repositories, sorted by **GitHub_Stars_Count** (descending).
 
 ### 1. Open-Source Healthcare Platforms & EHR CDS Engines
 
