@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1128"/>
+      <stop offset="50%" stop-color="#101f42"/>
+      <stop offset="100%" stop-color="#070d1e"/>
+    </linearGradient>
+
+    <!-- Glass Card Gradient -->
+    <linearGradient id="glass-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+
+    <linearGradient id="accent-emerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glow-ecg" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Embedded CSS for SVG Animations -->
+    <style>
+      .pulse-line {
+        stroke-dasharray: 800;
+        stroke-dashoffset: 800;
+        animation: dash 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      .scan-beam {
+        animation: scan 4s ease-in-out infinite alternate;
+      }
+      .node-ping {
+        animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        transform-origin: center;
+      }
+      .float-card-1 {
+        animation: float 6s ease-in-out infinite;
+      }
+      .float-card-2 {
+        animation: float 7s ease-in-out infinite 1s;
+      }
+      .float-card-3 {
+        animation: float 5.5s ease-in-out infinite 2s;
+      }
+      .data-stream {
+        stroke-dasharray: 12, 12;
+        animation: stream 20s linear infinite;
+      }
+
+      @keyframes dash {
+        0% { stroke-dashoffset: 800; }
+        50% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -800; }
+      }
+      @keyframes scan {
+        0% { transform: translateY(0px); opacity: 0.3; }
+        50% { opacity: 0.8; }
+        100% { transform: translateY(220px); opacity: 0.3; }
+      }
+      @keyframes ping {
+        0% { transform: scale(0.8); opacity: 0.8; }
+        50% { transform: scale(1.4); opacity: 0.2; }
+        100% { transform: scale(0.8); opacity: 0.8; }
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      @keyframes stream {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -400; }
+      }
+    </style>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bg-grad)"/>
+
+  <!-- Background Tech Grid -->
+  <g opacity="0.07" stroke="#ffffff" stroke-width="1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40"/>
+    </pattern>
+    <rect width="1200" height="360" fill="url(#grid)"/>
+  </g>
+
+  <!-- Dynamic Background Element 1: Animated ECG / Vital Waveform (Behind Text) -->
+  <path d="M 50 240 Q 150 240 220 240 L 240 210 L 255 280 L 275 160 L 295 250 L 310 230 L 325 240 Q 400 240 500 240 T 700 240 L 720 210 L 735 280 L 755 160 L 775 250 L 790 230 L 805 240 Q 900 240 1150 240" 
+        fill="none" stroke="#00f2fe" stroke-width="2.5" opacity="0.4" filter="url(#glow-ecg)" class="pulse-line"/>
+
+  <!-- Dynamic Background Element 2: Interconnected CDSS Workflow Nodes (Right Background) -->
+  <g opacity="0.25">
+    <line x1="900" y1="90" x2="1050" y2="130" stroke="#00f2fe" stroke-width="1.5" class="data-stream"/>
+    <line x1="1050" y1="130" x2="980" y2="230" stroke="#00f2fe" stroke-width="1.5" class="data-stream"/>
+    <line x1="980" y1="230" x2="1100" y2="280" stroke="#00f2fe" stroke-width="1.5" class="data-stream"/>
+    
+    <circle cx="900" cy="90" r="6" fill="#00f2fe"/>
+    <circle cx="1050" cy="130" r="8" fill="#38bdf8"/>
+    <circle cx="980" cy="230" r="7" fill="#10b981"/>
+    <circle cx="1100" cy="280" r="6" fill="#00f2fe"/>
+  </g>
+
+  <!-- Dynamic Floating Accent Cards (Subtle Background Visuals) -->
+  <!-- Card 1: FHIR Interop Pill -->
+  <g class="float-card-1" transform="translate(80, 55)">
+    <rect width="140" height="34" rx="17" fill="url(#glass-grad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="20" cy="17" r="5" fill="#38bdf8"/>
+    <text x="34" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">HL7 FHIR R4</text>
+  </g>
+
+  <!-- Card 2: CDS Hooks Pill -->
+  <g class="float-card-2" transform="translate(970, 60)">
+    <rect width="130" height="34" rx="17" fill="url(#glass-grad)" stroke="#10b981" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="20" cy="17" r="5" fill="#10b981"/>
+    <text x="34" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">CDS Hooks</text>
+  </g>
+
+  <!-- Card 3: AI Diagnostics Pill -->
+  <g class="float-card-3" transform="translate(1000, 210)">
+    <rect width="145" height="34" rx="17" fill="url(#glass-grad)" stroke="#a855f7" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="20" cy="17" r="5" fill="#a855f7"/>
+    <text x="34" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">AI Diagnostics</text>
+  </g>
+
+  <!-- FOREGROUND LAYER: Main Titles & Subtitles (Protected Foreground Area) -->
+  <!-- Center Main Badge -->
+  <g transform="translate(470, 60)">
+    <rect width="260" height="30" rx="15" fill="#1e293b" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.4"/>
+    <circle cx="18" cy="15" r="4" fill="#00f2fe" class="node-ping"/>
+    <text x="32" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="1">EVIDENCE-BASED HEALTHCARE</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="600" y="145" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" fill="url(#text-grad)" letter-spacing="-0.5">
+    Clinical Decision Support Systems
+  </text>
+
+  <!-- Subtitle Line 1 -->
+  <text x="600" y="190" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400" fill="#94a3b8">
+    Curated SaaS Platforms, Computable Guidelines, FHIR R4 Interoperability &amp; Clinical AI
+  </text>
+
+  <!-- Highlights / Feature Badges in Foreground -->
+  <g transform="translate(290, 235)">
+    <!-- Feature 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="180" height="42" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="90" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">💊 Drug Safety &amp; DDI</text>
+    </g>
+
+    <!-- Feature 2 -->
+    <g transform="translate(195, 0)">
+      <rect width="230" height="42" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="115" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">🩺 Diagnostic Calculators</text>
+    </g>
+
+    <!-- Feature 3 -->
+    <g transform="translate(440, 0)">
+      <rect width="180" height="42" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="90" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">🧬 SNOMED &amp; LOINC</text>
+    </g>
+  </g>
+
+  <!-- Subtle Bottom Border Accent -->
+  <rect x="0" y="354" width="1200" height="6" fill="url(#accent-cyan)"/>
+</svg>
