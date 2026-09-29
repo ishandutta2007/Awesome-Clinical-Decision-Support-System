@@ -66,27 +66,27 @@ Below is a tabular overview of top commercial SaaS CDSS products, sorted by **Co
 
 ## ⚡ Open-Source GitHub Projects
 
-The open-source ecosystem in clinical decision support plays a critical role in algorithm execution, FHIR interoperability, and AI model evaluation. Below is a curated list of open-source CDSS repositories, sorted by **GitHub Star Count** (descending).
+The open-source ecosystem in clinical decision support plays a critical role in algorithm execution, FHIR interoperability, and AI model evaluation. Below is a curated list of open-source CDSS repositories, sorted by **GitHub Stars_Count** (descending).
 
 ### 1. Open-Source Healthcare Platforms & EHR CDS Engines
 
-- **[openemr/openemr](https://github.com/openemr/openemr)** [![GitHub stars](https://img.shields.io/github/stars/openemr/openemr?style=social&color=white)](https://github.com/openemr/openemr/stargazers)
+- **[openemr/openemr](https://github.com/openemr/openemr)** [![GitHub_Stars](https://img.shields.io/github/stars/openemr/openemr?style=social&color=white)](https://github.com/openemr/openemr/stargazers)
   - **Description:** ONC-certified open-source Electronic Health Record (EHR) and medical practice management system. Features built-in clinical decision support rules, clinical reminders, patient portal, and drug interaction checking.
   - **License:** GPL-3.0
 
-- **[medplum/medplum](https://github.com/medplum/medplum)** [![GitHub stars](https://img.shields.io/github/stars/medplum/medplum?style=social&color=white)](https://github.com/medplum/medplum/stargazers)
+- **[medplum/medplum](https://github.com/medplum/medplum)** [![GitHub_Stars](https://img.shields.io/github/stars/medplum/medplum?style=social&color=white)](https://github.com/medplum/medplum/stargazers)
   - **Description:** Developer-first open-source healthcare platform and FHIR server. Automates CDS Hooks execution, patient workflow triggers, and clinical data pipelines with TypeScript/React support.
   - **License:** Apache-2.0
 
-- **[openmrs/openmrs-core](https://github.com/openmrs/openmrs-core)** [![GitHub stars](https://img.shields.io/github/stars/openmrs/openmrs-core?style=social&color=white)](https://github.com/openmrs/openmrs-core/stargazers)
+- **[openmrs/openmrs-core](https://github.com/openmrs/openmrs-core)** [![GitHub_Stars](https://img.shields.io/github/stars/openmrs/openmrs-core?style=social&color=white)](https://github.com/openmrs/openmrs-core/stargazers)
   - **Description:** Enterprise medical record system platform powering decision support modules, clinical alerts, and primary care guidelines in low-resource environments worldwide.
   - **License:** MPL-2.0
 
-- **[ohs-foundation/android-fhir](https://github.com/ohs-foundation/android-fhir)** [![GitHub stars](https://img.shields.io/github/stars/ohs-foundation/android-fhir?style=social&color=white)](https://github.com/ohs-foundation/android-fhir/stargazers)
+- **[ohs-foundation/android-fhir](https://github.com/ohs-foundation/android-fhir)** [![GitHub_Stars](https://img.shields.io/github/stars/ohs-foundation/android-fhir?style=social&color=white)](https://github.com/ohs-foundation/android-fhir/stargazers)
   - **Description:** Google & Open Health Stack Android FHIR SDK for building offline-capable mobile healthcare applications with integrated CQL execution and clinical decision logic.
   - **License:** Apache-2.0
 
-- **[smart-on-fhir/client-js](https://github.com/smart-on-fhir/client-js)** [![GitHub stars](https://img.shields.io/github/stars/smart-on-fhir/client-js?style=social&color=white)](https://github.com/smart-on-fhir/client-js/stargazers)
+- **[smart-on-fhir/client-js](https://github.com/smart-on-fhir/client-js)** [![GitHub_Stars](https://img.shields.io/github/stars/smart-on-fhir/client-js?style=social&color=white)](https://github.com/smart-on-fhir/client-js/stargazers)
   - **Description:** Open-source JavaScript client library for launching SMART on FHIR apps and triggering point-of-care Clinical Decision Support inside EHR user interfaces.
   - **License:** Apache-2.0
 
@@ -94,23 +94,23 @@ The open-source ecosystem in clinical decision support plays a critical role in 
 
 ### 2. Guideline Digitization & Algorithm Execution
 
-- **[IHTSDO/snowstorm](https://github.com/IHTSDO/snowstorm)** [![GitHub stars](https://img.shields.io/github/stars/IHTSDO/snowstorm?style=social&color=white)](https://github.com/IHTSDO/snowstorm/stargazers)
+- **[IHTSDO/snowstorm](https://github.com/IHTSDO/snowstorm)** [![GitHub_Stars](https://img.shields.io/github/stars/IHTSDO/snowstorm?style=social&color=white)](https://github.com/IHTSDO/snowstorm/stargazers)
   - **Description:** Official SNOMED CT terminology server maintained by SNOMED International. Provides standardized clinical code resolution essential for computable decision support algorithms.
   - **License:** Apache-2.0
 
-- **[cqframework/clinical_quality_language](https://github.com/cqframework/clinical_quality_language)** [![GitHub stars](https://img.shields.io/github/stars/cqframework/clinical_quality_language?style=social&color=white)](https://github.com/cqframework/clinical_quality_language/stargazers)
+- **[cqframework/clinical_quality_language](https://github.com/cqframework/clinical_quality_language)** [![GitHub_Stars](https://img.shields.io/github/stars/cqframework/clinical_quality_language?style=social&color=white)](https://github.com/cqframework/clinical_quality_language/stargazers)
   - **Description:** Reference tooling and parser ecosystem for HL7 Clinical Quality Language (CQL), the standard domain-specific language for computable clinical logic and decision rules.
   - **License:** Apache-2.0
 
-- **[cds-hooks/docs](https://github.com/cds-hooks/docs)** [![GitHub stars](https://img.shields.io/github/stars/cds-hooks/docs?style=social&color=white)](https://github.com/cds-hooks/docs/stargazers)
+- **[cds-hooks/docs](https://github.com/cds-hooks/docs)** [![GitHub_Stars](https://img.shields.io/github/stars/cds-hooks/docs?style=social&color=white)](https://github.com/cds-hooks/docs/stargazers)
   - **Description:** Official specification and architectural framework repository for CDS Hooks, enabling synchronous remote decision support calls during EHR workflow events.
   - **License:** Apache-2.0
 
-- **[cds-hooks/sandbox](https://github.com/cds-hooks/sandbox)** [![GitHub stars](https://img.shields.io/github/stars/cds-hooks/sandbox?style=social&color=white)](https://github.com/cds-hooks/sandbox/stargazers)
+- **[cds-hooks/sandbox](https://github.com/cds-hooks/sandbox)** [![GitHub_Stars](https://img.shields.io/github/stars/cds-hooks/sandbox?style=social&color=white)](https://github.com/cds-hooks/sandbox/stargazers)
   - **Description:** Web-based testing environment for previewing and debugging CDS Hooks services, card displays, and SMART app launches against simulated EHR workflows.
   - **License:** Apache-2.0
 
-- **[medAL-suite](https://github.com/cds-hooks/docs)** [![GitHub stars](https://img.shields.io/github/stars/cds-hooks/docs?style=social&color=white)](https://github.com/cds-hooks/docs/stargazers)
+- **[medAL-suite](https://github.com/cds-hooks/docs)** [![GitHub_Stars](https://img.shields.io/github/stars/cds-hooks/docs?style=social&color=white)](https://github.com/cds-hooks/docs/stargazers)
   - **Description:** Production-proven CDSS software suite featuring `medAL-creator`—a drag-and-drop interface for clinicians to digitize clinical algorithms. Deployed across Rwanda, Tanzania, Kenya, and Senegal with over 300,000 pediatric outpatient consultations completed.
   - **License:** Open Source
 
@@ -118,15 +118,15 @@ The open-source ecosystem in clinical decision support plays a critical role in 
 
 ### 3. Diagnostic Assistance, Medical AI & Clinical Analytics
 
-- **[HealthRex/CDSS](https://github.com/HealthRex/CDSS)** [![GitHub stars](https://img.shields.io/github/stars/HealthRex/CDSS?style=social&color=white)](https://github.com/HealthRex/CDSS/stargazers)
+- **[HealthRex/CDSS](https://github.com/HealthRex/CDSS)** [![GitHub_Stars](https://img.shields.io/github/stars/HealthRex/CDSS?style=social&color=white)](https://github.com/HealthRex/CDSS/stargazers)
   - **Description:** Stanford University HealthRex Lab reference implementation for Clinical Decision Support Systems evaluating predictive EHR models, clinical notes parsing, and real-time alerts.
   - **License:** MIT
 
-- **[albertzhzhou-droid/ParkinSUM](https://github.com/albertzhzhou-droid/ParkinSUM)** [![GitHub stars](https://img.shields.io/github/stars/albertzhzhou-droid/ParkinSUM?style=social&color=white)](https://github.com/albertzhzhou-droid/ParkinSUM/stargazers)
+- **[albertzhzhou-droid/ParkinSUM](https://github.com/albertzhzhou-droid/ParkinSUM)** [![GitHub_Stars](https://img.shields.io/github/stars/albertzhzhou-droid/ParkinSUM?style=social&color=white)](https://github.com/albertzhzhou-droid/ParkinSUM/stargazers)
   - **Description:** Local-first clinical decision support application for Parkinson's disease treatment education, medication timing, and drug-food interaction guidance.
   - **License:** MIT
 
-- **[VectorInstitute/cyclops](https://github.com/VectorInstitute/cyclops)** [![GitHub stars](https://img.shields.io/github/stars/VectorInstitute/cyclops?style=social&color=white)](https://github.com/VectorInstitute/cyclops/stargazers)
+- **[VectorInstitute/cyclops](https://github.com/VectorInstitute/cyclops)** [![GitHub_Stars](https://img.shields.io/github/stars/VectorInstitute/cyclops?style=social&color=white)](https://github.com/VectorInstitute/cyclops/stargazers)
   - **Description:** Evaluation and validation framework developed by Vector Institute for auditing machine learning models deployed in clinical decision support pipelines.
   - **License:** Apache-2.0
 
@@ -142,7 +142,7 @@ The open-source ecosystem in clinical decision support plays a critical role in 
 
 ### 4. Terminology Servers & Standardization Infrastructure
 
-- **[TMR Knowledge Acquisition Platform](https://github.com/kcl-inf/tmr-knowledge-acquisition-platform)** [![GitHub stars](https://img.shields.io/github/stars/cqframework/clinical_quality_language?style=social&color=white)](https://github.com/cqframework/clinical_quality_language/stargazers)
+- **[TMR Knowledge Acquisition Platform](https://github.com/kcl-inf/tmr-knowledge-acquisition-platform)** [![GitHub_Stars](https://img.shields.io/github/stars/cqframework/clinical_quality_language?style=social&color=white)](https://github.com/cqframework/clinical_quality_language/stargazers)
   - **Description:** Knowledge acquisition platform and shared library developed by King's College London for the TMR (Transition-based Medical Recommendations) guideline model. Integrates Z3 theorem provers with SNOMED CT terminology to detect guideline conflicts in multimorbidity.
   - **License:** Open Source
 
@@ -189,3 +189,12 @@ If you find this repository helpful for your clinical informatics, medical AI re
 ## 📜 Disclaimer
 
 *This repository is maintained strictly for informational, educational, and research purposes. It does not provide formal medical advice, clinical diagnosis, or treatment recommendations. Always consult qualified healthcare professionals and verify regulatory compliance (e.g., FDA SaMD, CE mark) before deploying software in live clinical workflows.*
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Clinical-Decision-Support-System&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Clinical-Decision-Support-System_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Clinical-Decision-Support-System_growth.svg">
+  </picture>
+</a>
