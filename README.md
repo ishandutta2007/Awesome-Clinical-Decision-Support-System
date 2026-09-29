@@ -1,3 +1,172 @@
-# Awesome-Clinical-Decision-Support-System
+# Awesome Clinical Decision Support System (CDSS)
 
-顶级临床决策支持系统 (CDSS) 生态系统精选 SaaS 产品与开源 GitHub 项目列表聚焦循证医学知识、药物相互作用检查、诊断辅助与临床工作流集成最后更新：2026 年 9 月本仓库追踪临床决策支持系统 (CDSS) 领域的知名 SaaS 平台与开源项目。这些工具帮助临床医生在诊疗点获取循证医学知识、检查药物相互作用、辅助诊断决策，并通过标准化接口（如 CDS Hooks、FHIR）集成到电子健康记录 (EHR) 工作流中。示例包括 Wolters Kluwer UpToDate、DynaMed、VisualDx、Elsevier ClinicalKey AI、Zynx Health、EBSCO Dynamic Health、Infermedica、Isabel Healthcare、OpenClinical 和 First Databank（该领域的领先者）。开源重点：临床决策支持的开源生态呈现两极分化。在知识库层面，UpToDate 等商业产品仍占绝对主导，开源替代极为稀缺。但在算法执行层面和药物安全层面，开源生态相当活跃：medAL-suite 已在卢旺达、坦桑尼亚等 5 国部署，完成超过 30 万次儿科门诊咨询 -1；HealthRex/CDSS（斯坦福）拥有 106 stars，是学术研究的重要参考实现 -16；Snowstorm 作为 SNOMED International 官方维护的术语服务器，为临床逻辑提供标准化支撑 -7。欢迎贡献！提交 PR 以添加/更新条目。保持描述事实性，并链接到官方网站。目录SaaS/托管平台开源 GitHub 项目如何贡献免责声明SaaS/托管平台Wolters Kluwer UpToDate全球使用最广泛的循证临床知识资源。提供主题综述、药物专论、患者教育材料和诊疗建议，被大多数美国医院和医学院采用。DynaMedEBSCO 旗下的循证临床决策支持工具。提供系统化文献监测、分级推荐和即时更新，专注于快速回答临床问题。VisualDx视觉诊断决策支持平台。通过图像比对和症状分析辅助皮肤科、感染科等领域的鉴别诊断，支持 3,000+ 疾病和 50,000+ 医学图像。Elsevier ClinicalKey AIElsevier 的 AI 驱动临床决策支持平台。整合循证内容和生成式 AI 提供快速临床问答。Zynx Health循证护理标准和临床内容提供商。为 EHR 提供可嵌入的临床决策支持内容和质量指标。EBSCO Dynamic Health护理和 Allied Health 领域的临床决策支持工具。提供技能检查、文化能力内容和循证护理指南。InfermedicaAI 驱动的症状检查和分诊平台。通过 API 嵌入到远程医疗、保险和医疗系统中，提供初步症状评估和护理建议。Isabel Healthcare诊断决策支持工具。输入症状和检查结果后，生成可能的鉴别诊断列表。OpenClinical临床决策支持知识管理资源。提供临床指南、决策支持工具和知识库的目录与比较。First Databank药物知识库和临床决策支持提供商。提供药物相互作用、剂量、过敏和用药指南数据，被广泛集成到 EHR 和药房系统中。开源 GitHub 项目临床算法执行与指南数字化medAL-suite最具生产部署规模的开源 CDSS 软件套件。 由四个组件构成，核心是 medAL-creator——一个无代码拖拽界面，让有经验的临床医生（而非软件开发者）直接设计临床算法 -1。算法自动部署到 medAL-reader 供一线临床使用。medAL-data 和 medAL-hub 负责配置、版本管理和部署。已部署规模：在卢旺达、坦桑尼亚、肯尼亚、塞内加尔和印度的大规模临床研究中用于数字化初级保健指南；仅卢旺达和坦桑尼亚就完成了超过 300,000 次儿科门诊咨询，显著减少了不适当抗生素处方 -1。聚焦于低资源环境的可持续数字系统，强调互操作性（与 EMR 集成）和低功耗。开源。TMR Knowledge Acquisition Platform针对 TMR (Transition-based Medical Recommendations) 可计算指南模型的知识获取平台与共享库。由伦敦国王学院开发，解决“知识获取瓶颈”问题 -5。特点：无代码知识获取仪表板 + 交互可视化器。集成 Z3 定理证明器与 SnowStorm 术语服务器，使用 SNOMED CT 自动化临床逻辑形式化。支持冲突检测（如矛盾推荐），特别针对多病共存场景下的指南冲突问题。提供“复制并修改”工作流，让利益相关者安全地适配本地协议。开源。Cortocircuito/InternaXpert用于疾病诊断和管理的 CDSS -9。开源。诊断辅助与鉴别诊断PhenoDP表型驱动的孟德尔病诊断辅助工具，发表于 Genome Medicine (2025) -12。三个核心模块：Summarizer（基于 DeepSeek-R1 微调的 Bio-Medical-3B-CoT 模型，从 HPO 术语生成以患者为中心的临床摘要）、Ranker（整合多种相似度度量对候选疾病排序，在多个真实数据集上持续优于现有方法）、Recommender（通过对比学习推荐缺失的 HPO 术语以完善鉴别诊断）-12。可与 Summarizer 和 Ranker 集成生成结构化临床报告。Python 实现，代码公开。PIE-Med可解释的临床决策支持系统，发表于 ECIR 2025 -10。结合图卷积网络 (GCN) 与大语言模型 (LLM)：GCN 基于患者健康数据和验证过的医学知识生成推荐；可解释性算法评估模型推理；LLM 代理将洞察转化为自然语言解释。关键设计：LLM 作为辅助推理代理而非主要决策者，以减轻幻觉和偏见风险 -10。代码公开。NCD-CIE因果信息驱动的非传染性疾病 CDSS，发表于 AI in Healthcare (2026) -17。三个核心组件：专家策展的因果知识图谱（107 条有向边，覆盖 8 个临床域）、逻辑链接风险引擎（带不确定性量化）、拓扑 what-if 模拟器（估计异质性治疗效应 HTE，识别高获益患者）-17。三层 LLM 增强：图谱验证（87.9% 专家一致性）、自然语言查询解析（92% 准确率）、反事实解释生成。在 Framingham 心脏研究队列（n=4,172）上验证。开源。OneHealth+可解释、临床医生在环的脑肿瘤 MRI 分类平台，发表于 SoftwareX (2026) -18。核心是验证优先管道：MRI 验证器拒绝非医学输入 → DSCBAM-Net 分类器（胶质瘤、脑膜瘤、垂体瘤、无肿瘤）→ 每个预测配对置信度和 Grad-CAM 叠加 → 预测进入待医生验证状态 → 临床医生记录明确裁决（同意/不同意/不确定）-18。关键设计：Grad-CAM 与预测、实时模型重跑、裁决控件同屏呈现，医生判断记录在证据旁而非裸标签上。Docker Compose 部署（Laravel + FastAPI + MySQL），无需 GPU。开源。药物相互作用与用药安全HealthRex/CDSS斯坦福大学 HealthRex 实验室开发的临床决策支持系统。106 stars，本周更新 -16。该仓库关联多个高价值医学 NLP 项目：知识图谱（157 疾病、491 症状、从 27 万+患者数据学习）、MIMIC-III 到 OMOP 映射、临床笔记 ICD 编码预测、MedCAT 教程等 -16。是学术研究的重要参考实现。PillChecker API药物相互作用检查后端 API。架构精细：OCR 清洗 → NER 提取（OpenMed-NER-PharmaDetect，108M 参数）→ RxNorm 回退（品牌名映射）→ DrugBank 相互作用查询（通过 MCP 服务器访问 17,400 药物 SQLite 数据库）→ 严重度分类（模板解析器 + DeBERTa v3 零样本分类）-19。返回包含 data_sources 和 limitations 的透明响应。Docker 三阶段构建，自包含。开源。LLM-Drug-Interaction-Checker基于 Streamlit 的应用程序，使用 Hugging Face 的免费基础 LLM（GPT-2、GPT-J、BioGPT）检测药物相互作用和副作用 -3。6 stars。简单的 UI，输入药物名称（逗号分隔）即可获得相互作用结果。Drug-Interaction-Checker (agnivadas)使用 PubChem API 识别和分析指定药物相互作用的 Python 工具。获取相互作用数据，处理为 CSV，并在终端中高亮显示 -11。适合快速探索多药物间的相互作用，面向医疗专业人士和研究人员。术语服务与标准化基础设施SnowstormSNOMED International 官方维护的 SNOMED CT 术语服务器 -7。基于 Elasticsearch、Spring Boot、Docker 的现代开源栈。功能：高级 SNOMED 专用 API、只读 HL7 FHIR API、多语言搜索和内容检索、完全符合 ECL v1.3、完整历史记录、支持只读和创作模式 -7。是 CDSS 临床逻辑形式化的关键基础设施。HAPI FHIR Server完整 HL7 FHIR 标准的 Java 实现，Smile Digital Health 开源产品 -14。支持术语操作，可作为 CDSS 集成的 FHIR 基础。其他强开源选项临床算法引擎：medAL-suite（生产规模部署，30 万+ 咨询）、TMR Knowledge Platform（SNOMED CT + Z3 定理证明器）。诊断辅助：PhenoDP（孟德尔病，HPO 驱动）、PIE-Med（GCN + LLM 可解释）、NCD-CIE（因果驱动，HTE 估计）、OneHealth+（临床医生在环，验证优先）。药物安全：PillChecker API（DrugBank + RxNorm + NER）、LLM-Drug-Interaction-Checker（Streamlit + Hugging Face）、Drug-Interaction-Checker（PubChem API）。术语基础设施：Snowstorm（SNOMED CT 官方，ECL 合规）、HAPI FHIR（完整 FHIR 实现）。构建自定义系统的框架：结合 medAL-suite 用于无代码临床算法设计和生产部署，Snowstorm 提供 SNOMED CT 术语服务，PillChecker API 或 HealthRex/CDSS 用于药物安全和临床 NLP，HAPI FHIR 作为标准化集成层。添加 PostgreSQL/Elasticsearch 用于持久化，Docker 用于部署。如何贡献Fork 仓库。在 README.md 中添加/编辑条目（遵循现有格式）。包含：名称、链接、1-2 句描述，以及是 SaaS 还是开源。提交 PR 并附简短说明。如果你觉得这个仓库有用，请点星！免责声明这是一个社区精选列表——并非详尽无遗，也不构成认可。临床决策支持系统处理敏感的患者健康数据；确保符合 HIPAA、GDPR、FDA 指南和适用的医疗器械法规（如 EU MDR）。开源现实：CDSS 的开源生态在算法执行层（medAL-suite）和药物安全层（PillChecker、HealthRex/CDSS）成熟且生产可用 -1-16-19。但在循证知识库层，UpToDate、DynaMed 等商业产品仍占据绝对主导，开源替代方案在内容更新频率、同行评审质量和临床权威性方面存在显著差距。对于需要即时临床知识查阅的场景，商业平台仍是首选；对于需要定制化算法和本地部署的场景，开源方案提供了可行的路径。为临床医生、临床信息学家、医学 NLP 研究者和医疗 IT 团队打造。让临床决策支持更开放、可解释、以患者为中心。
+A curated list of top Clinical Decision Support System (CDSS) SaaS products and open-source GitHub projects focusing on evidence-based medicine knowledge, drug interaction checking, diagnostic assistance, and clinical workflow integration.
+
+*Last Updated: September 2026*
+
+---
+
+This repository tracks notable SaaS platforms and open-source projects in the field of Clinical Decision Support Systems (CDSS). These tools help clinicians access evidence-based medical knowledge at the point of care, check for drug-drug interactions, assist with diagnostic decision-making, and integrate into Electronic Health Record (EHR) workflows using standardized interfaces (such as CDS Hooks and FHIR). 
+
+Examples include industry leaders like Wolters Kluwer UpToDate, DynaMed, VisualDx, Elsevier ClinicalKey AI, Zynx Health, EBSCO Dynamic Health, Infermedica, Isabel Healthcare, OpenClinical, and First Databank.
+
+> [!NOTE]
+> **Open Source Landscape:** The open-source ecosystem in clinical decision support exhibits a clear divide. At the **knowledge base level**, commercial products like UpToDate remain overwhelmingly dominant, with viable open-source alternatives being extremely rare. However, at the **algorithm execution level** and **drug safety level**, the open-source community is highly active:
+> - **medAL-suite** is deployed across 5 countries (including Rwanda and Tanzania), having completed over 300,000 pediatric outpatient consultations.
+> - **HealthRex/CDSS** (Stanford) serves as an essential reference implementation for academic research.
+> - **Snowstorm**, officially maintained by SNOMED International, provides standardized terminology server support for clinical logic.
+
+Contributions are welcome! Submit a Pull Request to add or update entries. Please keep descriptions factual and link directly to official sites.
+
+---
+
+## Table of Contents
+
+- [SaaS & Hosted Platforms](#saas--hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+  - [Clinical Algorithm Execution & Guideline Digitization](#clinical-algorithm-execution--guideline-digitization)
+  - [Diagnostic Assistance & Differential Diagnosis](#diagnostic-assistance--differential-diagnosis)
+  - [Drug Interactions & Medication Safety](#drug-interactions--medication-safety)
+  - [Terminology Services & Standardization Infrastructure](#terminology-services--standardization-infrastructure)
+- [Key Open-Source Recommendations](#key-open-source-recommendations)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
+
+---
+
+## SaaS & Hosted Platforms
+
+| Product Name | Description | Pricing Model & Limits |
+| :--- | :--- | :--- |
+| **Wolters Kluwer UpToDate** | The most widely used evidence-based clinical knowledge resource globally. Provides topic reviews, drug monographs, patient education materials, and clinical recommendations. Adopted by most U.S. hospitals and medical schools. | **Paid / Commercial**<br>Institutional subscriptions; individual plans start at ~$500–$600/year (no free tier, limited trial available upon request). |
+| **DynaMed** | EBSCO's evidence-based clinical decision support tool. Offers systematic literature monitoring, graded recommendations, and real-time updates focused on quickly answering point-of-care questions. | **Paid / Commercial**<br>Institutional and individual subscriptions (no permanent free tier; institutional licensing required). |
+| **VisualDx** | Visual diagnostic decision support platform. Assists differential diagnosis in dermatology, infectious diseases, and more through image comparison and symptom analysis. Supports 3,000+ diseases and 50,000+ medical images. | **Paid / Commercial**<br>Individual plans start at ~$40/month or ~$400/year; 14-day free trial available. |
+| **Elsevier ClinicalKey AI** | Elsevier’s AI-driven clinical decision support platform. Integrates evidence-based content with generative AI to provide rapid conversational clinical Q&A. | **Paid / Commercial**<br>Enterprise/Institutional licensing (pricing customized per healthcare organization; no public free tier). |
+| **Zynx Health** | Provider of evidence-based care standards and clinical content. Delivers embeddable clinical decision support content and quality metrics directly for EHR integration. | **Paid / Commercial**<br>Enterprise B2B pricing model (custom contracts per healthcare system/EHR vendor). |
+| **EBSCO Dynamic Health** | Clinical decision support tool designed for nursing and allied health professionals. Provides skill checklists, cultural competency content, and evidence-based nursing guidelines. | **Paid / Commercial**<br>Institutional subscriptions for hospitals and educational institutions (no individual free tier). |
+| **Infermedica** | AI-driven symptom checking and triage platform. Embedded via API into telehealth, insurance, and healthcare systems to provide initial symptom assessment and triage guidance. | **Paid / Commercial**<br>B2B API pricing based on usage/volume; free developer sandbox/demo API tier available for testing. |
+| **Isabel Healthcare** | Diagnostic decision support tool. Generates a comprehensive differential diagnosis list based on input symptoms and lab test results. | **Paid / Commercial**<br>Subscription-based for institutions and individuals (~$20–$30/month for clinicians); limited free web demo available. |
+| **OpenClinical** | Clinical decision support knowledge management directory and resource. Maintains catalogs and comparisons of clinical guidelines, decision support tools, and knowledge bases. | **Free Resource / Open Directory**<br>Free to access web directory and open knowledge repository. |
+| **First Databank (FDB)** | Drug knowledge base and clinical decision support provider. Delivers drug-drug interactions, dosing, allergies, and medication guidance data, widely integrated into EHRs and pharmacy systems. | **Paid / Commercial**<br>B2B enterprise licensing for EHR vendors, hospitals, and pharmacies (custom pricing). |
+
+---
+
+## Open-Source GitHub Projects
+
+### Clinical Algorithm Execution & Guideline Digitization
+
+- **medAL-suite**
+  - **Description:** The most production-proven open-source CDSS software suite. Consists of four main components centered around `medAL-creator`—a no-code drag-and-drop interface allowing experienced clinicians (rather than developers) to design clinical algorithms directly. Algorithms automatically deploy to `medAL-reader` for frontline clinical use, while `medAL-data` and `medAL-hub` handle configuration, version control, and deployment.
+  - **Scale:** Deployed in large-scale clinical research across Rwanda, Tanzania, Kenya, Senegal, and India to digitize primary care guidelines. Completed over 300,000 pediatric outpatient consultations in Rwanda and Tanzania alone, significantly reducing inappropriate antibiotic prescriptions. Focuses on sustainable digital systems for low-resource environments with high interoperability (EMR integration) and low power requirements.
+  - **License:** Open Source.
+
+- **TMR Knowledge Acquisition Platform**
+  - **Description:** A knowledge acquisition platform and shared library for the TMR (Transition-based Medical Recommendations) computable guideline model. Developed by King's College London to solve the "knowledge acquisition bottleneck".
+  - **Features:** Features a no-code knowledge acquisition dashboard and interactive visualizer. Integrates the Z3 theorem prover with the Snowstorm terminology server to automate clinical logic formalization using SNOMED CT. Supports conflict detection (e.g., contradictory recommendations), specifically addressing guideline conflicts in multimorbidity scenarios. Provides a "copy and modify" workflow for safe local protocol adaptation.
+  - **License:** Open Source.
+
+- **Cortocircuito / InternaXpert**
+  - **Description:** CDSS designed for disease diagnosis and clinical management.
+  - **License:** Open Source.
+
+---
+
+### Diagnostic Assistance & Differential Diagnosis
+
+- **PhenoDP**
+  - **Description:** Phenotype-driven diagnostic assistance tool for Mendelian diseases (*published in Genome Medicine, 2025*).
+  - **Modules:** Comprises three core modules: 
+    1. *Summarizer*: A Bio-Medical-3B-CoT model fine-tuned on DeepSeek-R1 that generates patient-centered clinical summaries from HPO (Human Phenotype Ontology) terms.
+    2. *Ranker*: Integrates multiple similarity metrics to rank candidate diseases, outperforming existing methods on real-world datasets.
+    3. *Recommender*: Recommends missing HPO terms via contrastive learning to refine differential diagnoses. Integrates with Summarizer and Ranker to generate structured clinical reports.
+  - **Implementation:** Python implementation, open code.
+
+- **PIE-Med**
+  - **Description:** Explainable clinical decision support system (*published in ECIR 2025*).
+  - **Architecture:** Combines Graph Convolutional Networks (GCN) with Large Language Models (LLM). The GCN generates recommendations based on patient health data and validated medical knowledge; explainability algorithms evaluate model reasoning; and an LLM agent translates insights into natural language explanations.
+  - **Key Design:** Uses the LLM strictly as an auxiliary reasoning agent rather than the primary decision-maker to mitigate hallucination and bias risks.
+  - **License:** Open Code.
+
+- **NCD-CIE**
+  - **Description:** Causal information-driven CDSS for non-communicable diseases (*published in AI in Healthcare, 2026*).
+  - **Components:** Features an expert-curated causal knowledge graph (107 directed edges covering 8 clinical domains), a logic-linked risk engine with uncertainty quantification, and a topological what-if simulator to estimate Heterogeneous Treatment Effects (HTE) and identify high-benefit patients. Enhanced by a 3-layer LLM setup for graph validation (87.9% expert agreement), natural language query parsing (92% accuracy), and counterfactual explanation generation. Validated on the Framingham Heart Study cohort ($n=4,172$).
+  - **License:** Open Source.
+
+- **OneHealth+**
+  - **Description:** Explainable, clinician-in-the-loop brain tumor MRI classification platform (*published in SoftwareX, 2026*).
+  - **Pipeline:** Built around a validation-first pipeline: MRI Validator rejects non-medical inputs $\rightarrow$ DSCBAM-Net classifier categorizes scan (glioma, meningioma, pituitary, no tumor) $\rightarrow$ Each prediction is paired with confidence scores and Grad-CAM overlays $\rightarrow$ Predictions enter a pending physician verification queue $\rightarrow$ Clinicians log explicit verdicts (agree/disagree/uncertain).
+  - **Deployment:** Docker Compose setup (Laravel + FastAPI + MySQL), running without requiring a dedicated GPU.
+  - **License:** Open Source.
+
+---
+
+### Drug Interactions & Medication Safety
+
+- **HealthRex/CDSS**
+  - **Description:** Clinical decision support system developed by Stanford University's HealthRex Lab. Associated with high-value medical NLP projects including knowledge graphs (157 diseases, 491 symptoms learned from 270,000+ patient records), MIMIC-III to OMOP mappings, ICD code prediction from clinical notes, and MedCAT tutorials.
+  - **Role:** Serves as a vital reference implementation for academic research.
+  - **License:** Open Source.
+
+- **PillChecker API**
+  - **Description:** Backend API for checking drug-drug interactions.
+  - **Architecture:** Complete pipeline: OCR cleaning $\rightarrow$ NER extraction (`OpenMed-NER-PharmaDetect`, 108M parameters) $\rightarrow$ RxNorm fallback (brand name mapping) $\rightarrow$ DrugBank interaction lookup (via MCP server accessing a 17,400-drug SQLite database) $\rightarrow$ Severity classification (template parser + DeBERTa v3 zero-shot classification). Returns transparent responses with `data_sources` and `limitations`.
+  - **Deployment:** 3-stage Docker build, fully self-contained.
+  - **License:** Open Source.
+
+- **LLM-Drug-Interaction-Checker**
+  - **Description:** Streamlit-based application utilizing Hugging Face free open foundation LLMs (GPT-2, GPT-J, BioGPT) to detect drug interactions and side effects. Provides a clean, minimalist UI where entering comma-separated drug names returns interaction insights.
+  - **License:** Open Source.
+
+- **Drug-Interaction-Checker (agnivadas)**
+  - **Description:** Python tool using the PubChem API to identify and analyze specified drug interactions. Fetches interaction data, processes it into CSV files, and highlights risk levels directly in the terminal. Tailored for quick multi-drug interaction exploration by healthcare professionals and researchers.
+  - **License:** Open Source.
+
+---
+
+### Terminology Services & Standardization Infrastructure
+
+- **Snowstorm**
+  - **Description:** The official SNOMED CT terminology server maintained by SNOMED International.
+  - **Tech Stack:** Modern open-source stack built on Elasticsearch, Spring Boot, and Docker.
+  - **Features:** Provides advanced SNOMED-specific APIs, read-only HL7 FHIR APIs, multilingual search and content retrieval, full compliance with ECL v1.3, complete version history, and support for both read-only and authoring modes. Essential infrastructure for formalizing CDSS clinical logic.
+  - **License:** Open Source.
+
+- **HAPI FHIR Server**
+  - **Description:** Complete Java implementation of the HL7 FHIR specification, open-sourced by Smile Digital Health. Supports terminology operations and serves as the FHIR foundational layer for CDSS integrations.
+  - **License:** Open Source.
+
+---
+
+## Key Open-Source Recommendations
+
+When building a custom Clinical Decision Support System, consider combining these specialized open-source tools:
+
+- **Clinical Algorithm Engine:** `medAL-suite` (for no-code clinical algorithm design and production deployment at scale) or `TMR Knowledge Platform` (SNOMED CT + Z3 theorem prover).
+- **Diagnostic Assistance:** `PhenoDP` (HPO-driven for Mendelian diseases), `PIE-Med` (explainable GCN + LLM), `NCD-CIE` (causal graph & HTE estimation), or `OneHealth+` (clinician-in-the-loop MRI platform).
+- **Drug Safety:** `PillChecker API` (DrugBank + RxNorm + NER pipeline), `HealthRex/CDSS`, or `LLM-Drug-Interaction-Checker`.
+- **Terminology & Integration Infrastructure:** `Snowstorm` (official SNOMED CT server) and `HAPI FHIR` (standardized FHIR integration layer).
+- **Persistence & Deployment:** PostgreSQL / Elasticsearch for storage with Docker Compose for orchestration.
+
+---
+
+## How to Contribute
+
+1. Fork the repository.
+2. Add or edit entries in `README.md` following the existing format.
+3. Include: Name, link, 1–2 sentence description, and whether it is SaaS or Open Source.
+4. Submit a Pull Request with a brief explanation.
+
+*If you find this repository useful, please give it a star!*
+
+---
+
+## Disclaimer
+
+This is a community-curated directory—it is neither exhaustive nor does it constitute medical endorsement. Clinical Decision Support Systems process sensitive patient health data; ensure strict compliance with HIPAA, GDPR, FDA guidelines, and applicable medical device regulations (such as EU MDR).
+
+> [!WARNING]
+> **Open Source vs. Commercial Knowledge Bases:** The open-source CDSS ecosystem is mature and production-ready for **algorithm execution** (`medAL-suite`) and **drug safety** (`PillChecker API`, `HealthRex/CDSS`). However, for **evidence-based clinical knowledge bases**, commercial platforms like UpToDate and DynaMed remain dominant. Open-source alternatives lag significantly in update frequency, peer-review rigor, and clinical authority.
+> 
+> Use commercial platforms when instant point-of-care medical reference is required; leverage open-source solutions when custom algorithms, localized workflows, and self-hosted deployments are needed.
+
+*Built for clinicians, clinical informaticists, medical NLP researchers, and healthcare IT teams. Making clinical decision support more open, explainable, and patient-centered.*
