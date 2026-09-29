@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: url(#bgGrad); }
+    .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 46px; font-weight: 800; fill: #ffffff; letter-spacing: -0.5px; }
+    .highlight { fill: url(#textGrad); }
+    .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 20px; font-weight: 400; fill: #94a3b8; letter-spacing: 0.2px; }
+    .tag { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 600; fill: #38bdf8; letter-spacing: 1.5px; text-transform: uppercase; }
+    
+    /* Animations */
+    @keyframes ecgPulse {
+      0% { stroke-dashoffset: 2400; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes floatNode {
+      0%, 100% { transform: translateY(0px) scale(1); opacity: 0.4; }
+      50% { transform: translateY(-12px) scale(1.15); opacity: 0.8; }
+    }
+    @keyframes gridGlow {
+      0%, 100% { opacity: 0.12; }
+      50% { opacity: 0.25; }
+    }
+
+    .ecg-line {
+      stroke: url(#pulseGrad);
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 1200 1200;
+      animation: ecgPulse 6s linear infinite;
+      filter: url(#glow);
+    }
+
+    .grid-lines { stroke: #334155; stroke-width: 1; opacity: 0.15; animation: gridGlow 4s ease-in-out infinite; }
+    .node-1 { animation: floatNode 4s ease-in-out infinite; }
+    .node-2 { animation: floatNode 5s ease-in-out 1s infinite; }
+    .node-3 { animation: floatNode 4.5s ease-in-out 2s infinite; }
+  </style>
+
+  <!-- Background Layer -->
+  <rect class="bg" width="1200" height="360" rx="16"/>
+
+  <!-- Subtle Dynamic Grid Lines -->
+  <g class="grid-lines">
+    <path d="M 0,60 L 1200,60 M 0,120 L 1200,120 M 0,180 L 1200,180 M 0,240 L 1200,240 M 0,300 L 1200,300" />
+    <path d="M 150,0 L 150,360 M 300,0 L 300,360 M 450,0 L 450,360 M 600,0 L 600,360 M 750,0 L 750,360 M 900,0 L 900,360 M 1050,0 L 1050,360" />
+  </g>
+
+  <!-- Background Decorative Floating Glowing Medical Nodes (Kept outside text area) -->
+  <g class="node-1" transform="translate(1020, 80)">
+    <circle cx="0" cy="0" r="28" fill="#0284c7" opacity="0.25" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="8" fill="#38bdf8"/>
+  </g>
+  <g class="node-2" transform="translate(1110, 240)">
+    <circle cx="0" cy="0" r="36" fill="#10b981" opacity="0.2" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="10" fill="#34d399"/>
+  </g>
+  <g class="node-3" transform="translate(90, 280)">
+    <circle cx="0" cy="0" r="30" fill="#6366f1" opacity="0.25" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="9" fill="#818cf8"/>
+  </g>
+
+  <!-- Animated ECG / Clinical Waveform Line at Bottom Decorative Area -->
+  <path class="ecg-line" d="M 0,310 L 250,310 L 270,290 L 285,335 L 305,250 L 325,340 L 340,300 L 355,310 L 650,310 L 670,295 L 685,330 L 705,260 L 725,335 L 740,305 L 755,310 L 1200,310" />
+
+  <!-- Foreground Text Content (Strictly in foreground, clear contrast) -->
+  <g transform="translate(80, 115)">
+    <!-- Top Category Tag -->
+    <text class="tag" x="0" y="0">EVIDENCE-BASED HEALTHCARE INFORMATIONAL REGISTRY</text>
+    
+    <!-- Main Title -->
+    <text class="title" x="0" y="55">
+      Awesome <tspan class="highlight">Clinical Decision Support</tspan>
+    </text>
+    
+    <!-- Subtitle -->
+    <text class="subtitle" x="0" y="98">
+      Curated CDSS SaaS Platforms, Open-Source Algorithms, CDS Hooks &amp; FHIR Tools
+    </text>
+
+    <!-- Pill Badges inside SVG Header -->
+    <g transform="translate(0, 130)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="135" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="67" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#38bdf8" text-anchor="middle">🏥 Enterprise CDSS</text>
+      
+      <!-- Pill 2 -->
+      <rect x="145" y="0" width="135" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="212" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#34d399" text-anchor="middle">⚡ CDS Hooks</text>
+      
+      <!-- Pill 3 -->
+      <rect x="290" y="0" width="135" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="357" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#818cf8" text-anchor="middle">🔥 HL7 FHIR R4</text>
+    </g>
+  </g>
+</svg>
